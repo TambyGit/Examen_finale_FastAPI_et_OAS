@@ -2,6 +2,8 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
-@app.get("/ping")
+@app.get("/health")
 async def root():
-    return {"message": "pong"}
+    return {"message:" "Ok"}
+
+@app.post("/phone")
