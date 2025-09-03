@@ -1,0 +1,30 @@
+openapi: 3.0.3
+info:
+  title: STD24016
+  description: This is a specification of STD24016
+  version: 1.0.0
+servers:
+  - url: http://localhost:8000
+components:
+  schemas:
+    ExampleObject:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+      required:
+        - "1"
+        - "Tamby"
+paths:
+  /example:
+    get:
+      summary: Retrieve an example object
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ExampleObject'
