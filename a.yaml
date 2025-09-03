@@ -20,7 +20,7 @@ components:
 paths:
   /example:
     get:
-      summary: Retrieve an example object
+      summary: Retrieve a student
       responses:
         '200':
           description: Successful response
